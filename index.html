@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html id="rootElm" lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bookmark</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+    <header id="header">
+      <div class="container p-5">
+        <h1 class="">Bookmarker</h1>
+      </div>
+    </header>
+
+    <!-- add bookmark !!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <section id="add-book">
+      <div class="container p-3 d-flex flex-column">
+        <div class="text-center head-add">
+          <h2>
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+        </div>
+        <div class="d-flex flex-column gap-5">
+          <div class="w-100 d-flex flex-column justify-content-center">
+            <label for="bookmarkName" class="pb-2 fw-semibold">
+              <i class="fa-solid fa-book-bookmark pe-2"></i>
+              Site Name</label
+            >
+            <input
+              type="text"
+              placeholder="Bookmark Name"
+              class="form-control"
+              id="bookmarkName"
+            />
+          </div>
+
+          <div class="w-100 d-flex flex-column justify-content-center">
+            <label for="bookmarkURL" class="pb-2 fw-semibold">
+              <i class="fa-solid fa-link pe-2"></i>Site URL</label
+            >
+            <input
+              type="url"
+              placeholder="Website URL"
+              class="form-control"
+              id="bookmarkURL"
+            />
+          </div>
+
+          <div class="w-25 m-auto">
+            <button class="w-100 btn sumbit-btn" id="add-btn">
+              <span>Sumbit</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- bookmark list!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <section class=" " id="bookmark-list">
+      <div class="container p-2 my-2">
+        <table class="w-100 bok-li">
+          <thead>
+            <tr class="text-center">
+              <th>Index</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="bookmark-list-show">
+            <!-- Bookmark list will be dynamically added here -->
+           
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
