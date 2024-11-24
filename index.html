@@ -17,7 +17,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-
+    <link rel="icon" href="./img/icon.png">
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,6 +27,22 @@
     />
   </head>
   <body>
+    <div id="layer" class=" position-absolute top-0 start-0 bottom-0 end-0 d-none overflow-hidden">
+      <div class=" position-absolute opacity-50 bg-black top-0 start-0 bottom-0 end-0 z-0">
+      
+      </div>
+      <div class="position-absolute top-50 start-50 translate-middle text-center bg-white z-3">
+        <h2>Is not valid input </h2>
+        <button
+          id="alert-w"
+          class="btn btn-outline-danger"
+          
+        >
+          Close
+        </button>
+      </div>
+    </div>
+     
     <!-- header !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
     <header id="header">
       <div class="container p-5">
@@ -36,8 +52,9 @@
 
     <!-- add bookmark !!!!!!!!!!!!!!!!!!!!!!!!!! -->
     <section id="add-book">
-      <div class="container p-3 d-flex flex-column">
-        <div class="text-center head-add">
+
+      <div class="container inner p-3  d-flex flex-column">
+        <div class="text-center head-add my-3">
           <h2>
             <i class="fa-solid fa-bookmark"></i>
             Bookmark your favorite sites
@@ -55,6 +72,9 @@
               placeholder="Bookmark Name"
               class="form-control"
               id="bookmarkName"
+              oninput="isValidName()"
+              
+              
             />
           </div>
 
@@ -67,6 +87,7 @@
               placeholder="Website URL"
               class="form-control"
               id="bookmarkURL"
+              oninput="isValidUrl()"
             />
           </div>
 
@@ -82,9 +103,9 @@
     <!-- bookmark list!!!!!!!!!!!!!!!!!!!!!!!!!! -->
     <section class=" " id="bookmark-list">
       <div class="container p-2 my-2">
-        <table class="w-100 bok-li">
+        <table class="w-100 bok-li text-center">
           <thead>
-            <tr class="text-center">
+            <tr >
               <th>Index</th>
               <th>Website Name</th>
               <th>Visit</th>

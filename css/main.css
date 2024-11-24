@@ -63,11 +63,11 @@ h1:hover::after {
   text-align: center;
 }
 
-#add-book {
+.inner {
   border-bottom: 2px dashed var(--text-color);
   border-top: 2px dashed var(--text-color);
-  margin: auto;
-  width: 70%;
+
+
   padding: 3rem;
 }
 .sumbit-btn {
